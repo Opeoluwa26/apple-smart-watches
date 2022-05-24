@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./apple.css">
+    <script src="./jquery-3.3.1.js"></script>
+    <title>AppleWatches</title>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Cart</a></li>
+                    <li><a href="#">Order</a></li>
+                    <li><a href="#">Login</a></li>
+
+                </ul>
+            </nav>
+            <a href="#" class="logo"><img src="images/Apple-logo-removebg-preview.png" alt=""></a>
+        </header>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br> 
+        <div class="wrapper">
+            <div class="content">
+                            
+                   
+                <h1>App Watches Series 7</h1>
+                <h3>Key Features:</h3>
+                <ul>
+                    <li>Measure Your Blood Oxygen Level</li>
+                    <li>Take an ECG Anywhere</li>
+                    <li>The New Sleep App</li>
+                    <li>The Always-On Retina LTPO OLED Display</li>
+                </ul>
+                <span class="price" data-text="N265,999.-">N225,650/-</span>
+                <div class="button">
+                    <a href="#"><button>Buy Now</button></a>
+                    <a href="#"><button>Add To Cart</button></a>
+                </div>
+                <div class="social-media">
+                    <div class="icon">
+                        <img src="images/facebook.png" alt="">
+                        <a href="http://facebook.com">
+                        <img src="images/arrow.png" alt=""></a>
+                    </div>
+                    <div class="icon">
+                        <img src="images/twitter.png" alt="">
+                        <a href="http://twitter.com">
+                        <img src="images/arrow.png" alt=""></a>
+                    </div>
+                    <div class="icon">
+                  
+                        <img src="images/instagram.png" alt="">
+                        <a href="http://instagram.com">
+                        <img src="images/arrow.png" alt=""></a>
+                    </div>
+                </div>
+            </div>
+          
+            <div class="image-container">
+                <div class="images">
+                 
+                    <img src="images/watch1.png" class="active" alt="">
+                    <img src="images/watches3.png" alt="">
+                    <img src="images/watches4.png" alt="">
+                    <img src="images/watches2.png" alt="">
+                    <img src="images/watches5.png" alt="">
+                </div>
+
+                <div class="controls">
+                    <div id="left"><img src="images/arrow.png" id="upBtn" ></div>
+                        <h3>Colors Available :</h3>
+                    <div id="right"><img src="images/arrow.png" id="downBtn"></div> 
+                 </div>
+            </div>
+        </div>
+        <a href="#work" class="btn"> Back To Home Page </a>
+    </div>
+
+       
+
+
+
+
+
+
+    <script>
+        $(document).ready(function(){
+            $('nav ul li a').click(function(){
+                $('nav ul li a').removeClass('active');
+                $(this).addClass('active');
+            });
+
+            $('#upBtn').click(function(){
+                $('.image-container').find('.active').next().addClass('active');
+                $('.image-container').find('.active').prev().removeClass('active');
+
+            });
+            $('#downBtn').click(function(){
+                $('.image-container').find('.active').prev().addClass('active');
+                $('.image-container').find('.active').next().removeClass('active');
+
+            });
+        });
+    </script>
+
+</body>
+</html>
